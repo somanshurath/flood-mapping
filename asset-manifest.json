@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/flood-mapping/static/css/main.d3d9b0a8.css",
+    "main.js": "/flood-mapping/static/js/main.61e983d7.js",
+    "index.html": "/flood-mapping/index.html",
+    "main.d3d9b0a8.css.map": "/flood-mapping/static/css/main.d3d9b0a8.css.map",
+    "main.61e983d7.js.map": "/flood-mapping/static/js/main.61e983d7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d3d9b0a8.css",
+    "static/js/main.61e983d7.js"
+  ]
+}
