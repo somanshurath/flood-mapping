@@ -18,7 +18,7 @@ function App() {
         <div className='App'>
             <h2 className='heading'>Flood Mapping and Prediction</h2>
             <div className='map' id='map'>
-                <MapContainer center={[19.1, 72.87]} zoom={14}>
+                <MapContainer center={[19.1, 72.87]} zoom={13}>
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                         url={`https://tile.openstreetmap.org/{z}/{x}/{y}.png`}
