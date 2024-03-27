@@ -5,12 +5,6 @@ import { Icon } from 'leaflet';
 
 function App() {
     const markers = [
-        {
-            GeoJSON: {
-                type: 'Point',
-                coordinates: [19.1, 72.87],
-            },
-        },
     ];
 
     const customIcon = new Icon({
@@ -26,8 +20,8 @@ function App() {
             <div className='map' id='map'>
                 <MapContainer center={[19.1, 72.87]} zoom={14}>
                     <TileLayer
-                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-                        url='https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png'
+                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                        url={`https://tile.openstreetmap.org/{z}/{x}/{y}.png`}
                     />
                     {markers.map((marker, index) => (
                         <Marker
