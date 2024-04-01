@@ -20,10 +20,23 @@
     padding-bottom: 0.5em;
 }
 
-
 .leaflet-container {
     height: 80vh;
     width: 70vw;
+}
+
+/* For tablets: */
+@media only screen and (max-width: 768px) {
+    .leaflet-container {
+        width: 90vw;
+    }
+}
+
+/* For mobile phones: */
+@media only screen and (max-width: 480px) {
+    .leaflet-container {
+        width: 100vw;
+    }
 }
 
 footer {
