@@ -9,11 +9,11 @@ import { DivaRoads, LowerMumbra } from './roads/Mumbra-DivaRoads.js';
 
 function App() {
     const darktileUrl =
-        'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png';
+        'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png/';
 
     const lighttileUrl = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
 
-    const [tileUrl, setTileUrl] = useState(darktileUrl);
+    const [tileUrl, setTileUrl] = useState(lighttileUrl);
 
     const switchTileProvider = () => {
         if (tileUrl === darktileUrl) {
