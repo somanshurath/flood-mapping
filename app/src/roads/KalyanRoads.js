@@ -728,9 +728,7 @@ export const KalyanRoads_KalWest = {
         },
         {
             type: 'Feature',
-            properties: {
-                roadtype: 'highway',
-            },
+            properties: {},
             geometry: {
                 coordinates: [
                     [73.12043866071616, 19.2466291102928],
