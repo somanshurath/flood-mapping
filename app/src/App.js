@@ -1,31 +1,47 @@
 import './style.css';
-import { MapContainer, TileLayer, Marker } from 'react-leaflet';
+import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import { Icon } from 'leaflet';
+import { GeoJSON } from 'react-leaflet';
+import { DombivliRoads } from './roads/DombivliRoads.js';
+import { newRoads } from './roads/newRoads.js';
 
 function App() {
-    const customIcon = new Icon({
-        iconUrl:
-            'https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678111-map-marker-512.png',
-        iconSize: [28, 28],
-    });
-
     return (
         <div className='App'>
             <h2 className='heading'>Flood Mapping and Prediction</h2>
             <div className='map' id='map'>
-                <MapContainer center={[19.1, 72.87]} zoom={13}>
+                <MapContainer
+                    center={[19.22946599675518, 73.0800348686054]}
+                    zoom={15}
+                >
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                         url={`https://tile.openstreetmap.org/{z}/{x}/{y}.png`}
                     />
-                    {/* {markers.map((marker, index) => (
-                        <Marker
+
+                    {DombivliRoads.features.map((road, index) => (
+                        <GeoJSON
                             key={index}
-                            position={marker.GeoJSON.coordinates}
-                            icon={customIcon}
+                            data={road}
+                            style={() => ({
+                                color: 'red',
+                                weight: 2,
+                                opacity: 0.6,
+                            })}
                         />
-                    ))} */}
+                    ))}
+
+                    {newRoads.features.map((road, index) => (
+                        <GeoJSON
+                            key={index}
+                            data={road}
+                            style={() => ({
+                                color: 'blue',
+                                weight: 2,
+                                opacity: 0.6,
+                            })}
+                        />
+                    ))}
                 </MapContainer>
             </div>
             <footer>
